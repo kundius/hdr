@@ -1,0 +1,26 @@
+<div class="schedule-groups">
+    <div class="schedule-groups___title">Группы:</div>
+    <ul class="schedule-groups___list" data-uk-switcher="{ connect:'#schedule' }">
+        {$_modx->runSnippet('pdoResources', [
+            'parents' => 3,
+            'depth' => 0,
+            'limit' => 0,
+            'sortby' => 'menuindex',
+            'sortdir' => 'ASC',
+            'tvPrefix' => '',
+            'tpl' => '@INLINE <li><span>{$menutitle ?: $pagetitle}</span></li>'
+        ])}
+    </ul>
+</div>
+<ul id="schedule" class="uk-switcher">
+    {$_modx->runSnippet('pdoResources', [
+        'parents' => 3,
+        'depth' => 0,
+        'limit' => 0,
+        'sortby' => 'menuindex',
+        'sortdir' => 'ASC',
+        'tvPrefix' => '',
+        'includeTVs' => 'schedule,activities',
+        'tpl' => 'tpl.Schedule.list.row'
+    ])}
+</ul>

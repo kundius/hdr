@@ -1,0 +1,111 @@
+[2017-09-11 07:20:21] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-11 07:29:27] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC, category ASC' at line 1
+)
+
+[2017-09-11 13:32:43] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC, category ASC' at line 1
+)
+
+[2017-09-12 11:10:52] (ERROR in xPDOConnection::connect @ /var/www/hdr.dev/public/core/xpdo/xpdo.class.php : 3116) SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+[2017-09-12 11:10:52] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoquery.class.php : 653) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `q777_extension_packages` AS `modExtensionPackage` JOIN `q777_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2017-09-12 11:11:13] (ERROR in xPDOConnection::connect @ /var/www/hdr.dev/public/core/xpdo/xpdo.class.php : 3116) SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+[2017-09-12 11:11:13] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoquery.class.php : 653) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `q777_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2017-09-12 11:11:33] (ERROR in xPDOConnection::connect @ /var/www/hdr.dev/public/core/xpdo/xpdo.class.php : 3116) SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+[2017-09-12 11:11:33] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 263) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `q777_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2017-09-12 11:11:44] (ERROR in xPDOConnection::connect @ /var/www/hdr.dev/public/core/xpdo/xpdo.class.php : 3116) SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+[2017-09-12 11:11:44] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoquery.class.php : 653) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `q777_extension_packages` AS `modExtensionPackage` JOIN `q777_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2017-09-12 11:11:53] (ERROR in xPDOConnection::connect @ /var/www/hdr.dev/public/core/xpdo/xpdo.class.php : 3116) SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+[2017-09-12 11:11:53] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoquery.class.php : 653) Could not construct or prepare query because it is invalid or could not connect: SELECT `modActionDom`.`id`, `modActionDom`.`set`, `modActionDom`.`action`, `modActionDom`.`name`, `modActionDom`.`description`, `modActionDom`.`xtype`, `modActionDom`.`container`, `modActionDom`.`rule`, `modActionDom`.`value`, `modActionDom`.`constraint`, `modActionDom`.`constraint_field`, `modActionDom`.`constraint_class`, `modActionDom`.`active`, `modActionDom`.`for_parent`, `modActionDom`.`rank`, `FCSet`.`constraint_class`, `FCSet`.`constraint_field`, `FCSet`.`constraint`, `FCSet`.`template` FROM `q777_actiondom` AS `modActionDom` JOIN `q777_fc_sets` `FCSet` ON `modActionDom`.`set` =  `FCSet`.`id` JOIN `q777_fc_profiles` `Profile` ON FCSet.profile = Profile.id LEFT JOIN `q777_fc_profiles_usergroups` `ProfileUserGroup` ON Profile.id = ProfileUserGroup.profile LEFT JOIN `q777_fc_profiles` `UGProfile` ON UGProfile.id = ProfileUserGroup.profile WHERE  ( `modActionDom`.`action` = ? AND `modActionDom`.`for_parent` = ? AND `FCSet`.`active` = ? AND `Profile`.`active` = ? )  ORDER BY modActionDom.rank ASC 
+[2017-09-12 11:12:04] (ERROR in xPDOConnection::connect @ /var/www/hdr.dev/public/core/xpdo/xpdo.class.php : 3116) SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+[2017-09-12 11:12:04] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoquery.class.php : 653) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `q777_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2017-09-12 11:12:13] (ERROR in xPDOConnection::connect @ /var/www/hdr.dev/public/core/xpdo/xpdo.class.php : 3116) SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+[2017-09-12 11:12:13] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 263) Error preparing statement for query: SELECT `modActionDom`.`id`, `modActionDom`.`set`, `modActionDom`.`action`, `modActionDom`.`name`, `modActionDom`.`description`, `modActionDom`.`xtype`, `modActionDom`.`container`, `modActionDom`.`rule`, `modActionDom`.`value`, `modActionDom`.`constraint`, `modActionDom`.`constraint_field`, `modActionDom`.`constraint_class`, `modActionDom`.`active`, `modActionDom`.`for_parent`, `modActionDom`.`rank`, `FCSet`.`constraint_class`, `FCSet`.`constraint_field`, `FCSet`.`constraint`, `FCSet`.`template` FROM `q777_actiondom` AS `modActionDom` JOIN `q777_fc_sets` `FCSet` ON `modActionDom`.`set` =  `FCSet`.`id` JOIN `q777_fc_profiles` `Profile` ON FCSet.profile = Profile.id LEFT JOIN `q777_fc_profiles_usergroups` `ProfileUserGroup` ON Profile.id = ProfileUserGroup.profile LEFT JOIN `q777_fc_profiles` `UGProfile` ON UGProfile.id = ProfileUserGroup.profile WHERE  ( `modActionDom`.`action` = ? AND `modActionDom`.`for_parent` = ? AND `FCSet`.`active` = ? AND `Profile`.`active` = ? )  ORDER BY modActionDom.rank ASC  - 
+[2017-09-12 17:39:27] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-13 15:28:50] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-13 17:13:32] (ERROR @ /var/www/hdr.dev/public/core/model/modx/modcachemanager.class.php : 344) Error caching lexicon topic lexicon/ru/core/file
+[2017-09-13 17:57:58] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-13 19:52:02] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-14 15:28:18] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-16 07:09:47] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-18 13:15:26] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-18 14:03:23] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+
+[2017-09-19 13:43:34] (ERROR @ /var/www/hdr.dev/public/core/xpdo/om/xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1
+)
+

@@ -1,0 +1,13 @@
+<div class="files-item">
+  <a href="{$url}" target="_blank">
+    {if $ext == 'pdf'}
+      <i class="uk-icon-file-pdf-o"></i>
+    {elseif $ext == 'doc' || $ext == 'docx'}
+      <i class="uk-icon-file-word-o"></i>
+    {else}
+      <i class="uk-icon-file-o"></i>
+    {/if}
+    {$description ?: $name}
+  </a>
+  <span>({$size|formatSize})</span>
+</div>

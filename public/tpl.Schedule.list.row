@@ -1,0 +1,20 @@
+<li>
+    <div class="uk-grid uk-grid-width-xlarge-1-2">
+        <div>
+            <div class="schedule-subtitle"><span>Режим дня</span></div>
+            <div class="schedule-list">
+                {$schedule}
+            </div>
+        </div>
+        <div>
+            <div class="schedule-subtitle"><span>Сетка занятий</span></div>
+            <div class="schedule-activities">
+                {foreach $activities as $s}
+                    <div class="schedule-activity schedule-activity--{$s['day']}">
+                      <div>{$s['activities']}</div>
+                    </div>
+                {/foreach}
+            </div>
+        </div>
+    </div>
+</li>
